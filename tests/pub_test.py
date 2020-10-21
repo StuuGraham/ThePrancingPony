@@ -1,5 +1,7 @@
 import unittest
 from src.pub import Pub
+from src.drinks import Drink
+from src.customer import Customer
 
 class TestPub(unittest.TestCase):
     
@@ -15,3 +17,8 @@ class TestPub(unittest.TestCase):
     def test_pub_drinks_collection(self):
         self.pub.drinks_collection = ["Gin and Tonic", "Rum and Coke", "Brandy"]
         self.assertEqual(3, len(self.pub.drinks_collection))
+
+    def test_serve_drink(self):
+        drink = Drink("Brandy", 4.00)
+        self.pub.serve_drink(drink)
+        self.assertEqual(104.00, self.pub.till)
