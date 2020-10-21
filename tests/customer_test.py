@@ -30,6 +30,11 @@ class TestCustomer(unittest.TestCase):
         drink = Drink("Gin and Tonic", 2.50, 3, 10)
         self.customer3.increase_drunkenness(drink)
         self.assertEqual(3, self.customer3.drunkenness)
+
+    def test_buy_food(self):
+        food = Food("Second Breakfast", 1.50, 2)
+        self.customer1.buy_food(food)
+        self.assertEqual(78.50 , self.customer1.wallet)
     
     def test_rejuvenate(self):
         self.customer4.drunkenness = 5

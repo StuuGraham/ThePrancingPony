@@ -55,8 +55,8 @@ class TestPub(unittest.TestCase):
        self.pub.check_total_stock_level(self.drinks_stock)
        self.assertEqual(33, self.pub.check_total_stock_level(self.drinks_stock))
 
-    def test_check_total_stock_value(self):
+    def test_check_total_stock_price(self):
        self.drinks_stock = [self.drink1, self.drink2, self.drink3]
-       self.pub.check_total_stock_value(self.drinks_stock)
-       self.assertEqual(94.50, self.pub.check_total_stock_value(self.drinks_stock))
+       self.pub.check_total_stock_price(self.drinks_stock)
+       self.assertEqual(94.50, self.pub.check_total_stock_price(self.drinks_stock))
 

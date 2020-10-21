@@ -27,7 +27,7 @@ class Pub:
         return total_stock_level
 
 
-    def check_total_stock_value(self,drinks):
+    def check_total_stock_price(self,drinks):
         total_stock_value = 0
         for drink in drinks:
             drink_stock_value = drink.stock_level * drink.price
