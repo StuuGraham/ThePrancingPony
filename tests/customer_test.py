@@ -19,7 +19,7 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual(100.00, self.customer3.wallet)
 
     def test_buy_drink(self):
-        drink = Drink("Brandy", 4.00, 5)
+        drink = Drink("Brandy", 4.00, 5, 8)
         self.customer2.buy_drink(drink)
         self.assertEqual(46.00, self.customer2.wallet)
 
@@ -27,7 +27,7 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual(0, self.customer1.drunkenness)
 
     def test_increase_drunkenness(self):
-        drink = Drink("Gin and Tonic", 2.50, 3)
+        drink = Drink("Gin and Tonic", 2.50, 3, 10)
         self.customer3.increase_drunkenness(drink)
         self.assertEqual(3, self.customer3.drunkenness)
     
