@@ -24,11 +24,11 @@ class TestPub(unittest.TestCase):
         self.assertEqual(104.00, self.pub.till)
 
     def test_check_age__true(self):
-        customer = Customer("Frodo Baggins", 100.00, 50)
+        customer = Customer("Frodo Baggins", 100.00, 50, 0)
         self.pub.check_age(customer)
         self.assertEqual(True, self.pub.check_age(customer))
 
     def test_check_age__false(self):
-        customer = Customer("Peregrin Took", 80.00, 28)
+        customer = Customer("Peregrin Took", 80.00, 28, 0)
         self.pub.check_age(customer)
         self.assertEqual(False, self.pub.check_age(customer))
