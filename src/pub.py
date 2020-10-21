@@ -34,4 +34,6 @@ class Pub:
             total_stock_value += drink_stock_value
         return total_stock_value
 
+    def serve_food(self, food):
+        self.till += food.price
 
