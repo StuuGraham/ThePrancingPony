@@ -32,3 +32,13 @@ class TestPub(unittest.TestCase):
         customer = Customer("Peregrin Took", 80.00, 28, 0)
         self.pub.check_age(customer)
         self.assertEqual(False, self.pub.check_age(customer))
+
+    def test_check_drunkenness__true(self):
+        customer = Customer("Frodo Baggins", 100.00, 50, 0)
+        self.pub.check_drunkenness(customer)
+        self.assertEqual(True, self.pub.check_drunkenness(customer))
+
+    def test_check_drunkenness__false(self):
+        customer = Customer("Peregrin Took", 80.00, 28, 21)
+        self.pub.check_drunkenness(customer)
+        self.assertEqual(False, self.pub.check_drunkenness(customer))

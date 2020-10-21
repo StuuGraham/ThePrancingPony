@@ -12,3 +12,9 @@ class Pub:
             return True
         else:
             return False
+
+    def check_drunkenness(self, customer):
+        if customer.drunkenness <= 20:
+            return True
+        else:
+            return False
