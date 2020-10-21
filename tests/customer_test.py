@@ -24,3 +24,8 @@ class TestCustomer(unittest.TestCase):
 
     def test_drunkenness_level(self):
         self.assertEqual(0, self.customer1.drunkenness)
+
+    def test_increase_drunkenness(self):
+        drink = Drink("Gin and Tonic", 2.50, 3)
+        self.customer3.increase_drunkenness(drink)
+        self.assertEqual(3, self.customer3.drunkenness)

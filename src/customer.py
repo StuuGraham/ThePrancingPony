@@ -10,4 +10,7 @@ class Customer:
 # wallet and added to the pub till.
     def buy_drink(self, drink):
         self.wallet -= drink.price
+
+    def increase_drunkenness(self, drink):
+        self.drunkenness += drink.alcohol_level
         
