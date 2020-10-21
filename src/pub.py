@@ -6,3 +6,9 @@ class Pub:
 
     def serve_drink(self, drink):
         self.till += drink.price
+
+    def check_age(self, customer):
+        if customer.age >= 30:
+            return True
+        else:
+            return False
