@@ -26,8 +26,12 @@ class Pub:
            total_stock_level += drink.stock_level
         return total_stock_level
 
-            # get stock level number
-            # then add that number to total_stock_level
-            # repeat until end of list
+
+    def check_total_stock_value(self,drinks):
+        total_stock_value = 0
+        for drink in drinks:
+            drink_stock_value = drink.stock_level * drink.price
+            total_stock_value += drink_stock_value
+        return total_stock_value
 
 
