@@ -65,3 +65,15 @@ class TestPub(unittest.TestCase):
         food = Food("Second Breakfast", 1.50, 2)
         self.pub.serve_food(food)
         self.assertEqual(101.50, self.pub.till)
+
+    def test_at_the_bar__true(self):
+        drink = self.drink1
+        customer = Customer("Peregrin Took", 80.00, 31, 19)
+        self.pub.at_the_bar(drink, customer)
+        self.assertEqual(102.50, self.pub.till)
+
+    def test_at_the_bar__false(self):
+        drink = self.drink1
+        customer = Customer("Peregrin Took", 80.00, 28, 21)
+        self.pub.at_the_bar(drink, customer)
+        self.assertEqual(100.00, self.pub.till)

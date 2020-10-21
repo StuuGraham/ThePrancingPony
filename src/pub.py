@@ -37,3 +37,9 @@ class Pub:
     def serve_food(self, food):
         self.till += food.price
 
+    def at_the_bar(self, drink, customer):
+        if self.check_age(customer) == True:
+            if self.check_drunkenness(customer) == True:
+                self.serve_drink(drink)
+        else: print("Not tonight mate!")
+
