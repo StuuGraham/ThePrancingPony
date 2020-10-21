@@ -19,7 +19,7 @@ class TestPub(unittest.TestCase):
         self.assertEqual(3, len(self.pub.drinks_collection))
 
     def test_serve_drink(self):
-        drink = Drink("Brandy", 4.00)
+        drink = Drink("Brandy", 4.00, 5)
         self.pub.serve_drink(drink)
         self.assertEqual(104.00, self.pub.till)
 

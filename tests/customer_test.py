@@ -18,6 +18,6 @@ class TestCustomer(unittest.TestCase):
         self.assertEqual(100.00, self.customer3.wallet)
 
     def test_buy_drink(self):
-        drink = Drink("Brandy", 4.00)
+        drink = Drink("Brandy", 4.00, 5)
         self.customer2.buy_drink(drink)
         self.assertEqual(46.00, self.customer2.wallet)
